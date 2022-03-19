@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdjustAppID</key>
+	<string>546456456</string>
+	<key>AppIdentifierPrefix</key>
+	<string>${AppIdentifierPrefix}</string>
+	<key>AppStoreID</key>
+	<string>1325414882126</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Dark Romance: Notre-Dame F2P</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.dominigames.abc.ios.fremium</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1234514886789</string>
+				<string>com.dominigames.adb.ios.fremium</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1234514886789</string>
+	<key>FacebookClientToken</key>
+	<string>sd54fs54fs5fd15</string>
+	<key>FacebookDisplayName</key>
+	<string>Dark Romance: Notre-Dame</string>
+	<key>FlurryAppAPIKey</key>
+	<string>asda56da4d56a4d56</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-0000000000000000~0000000000</string>
+	<key>appodeal_app_key</key>
+	<string>somethink_key</string>
+	</dict>
+</plist>

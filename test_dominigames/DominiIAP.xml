@@ -1,0 +1,27 @@
+<config>
+	<shop_items>
+	<!-- unlock -->
+		<item>
+			<ID>unlock</ID>
+			<ProductID>com.dominigames.mr1.unlock</ProductID>
+			<ProductPrice>$5.99</ProductPrice>
+			<store_desc>Unlock</store_desc>
+			<analytics_event_name>unlock</analytics_event_name>
+		</item>
+	<!-- unlock tier 6 -->
+		<item>
+			<ID>t6</ID>
+			<ProductID>com.dominigames.mr1.unlock_t6</ProductID>
+			<ProductPrice>$3.49</ProductPrice>
+			<store_desc>Unlock_tier6</store_desc>
+			<analytics_event_name>unlock_t6</analytics_event_name>
+		</item>
+		<item>
+			<ID>t30</ID>
+			<ProductID>com.dominigames.mr1.unlock_t30</ProductID>
+			<ProductPrice>$4.99</ProductPrice>
+			<store_desc>Unlock_tier30</store_desc>
+			<!-- <analytics_event_name>unlock_t30</analytics_event_name> -->
+		</item>
+	</shop_items>
+</config>
