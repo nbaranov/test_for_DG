@@ -4,6 +4,7 @@ import os
 from argparse import ArgumentParser
 from chardet import detect
 from pynvim import encoding
+from termcolor import colored
 
 
 # Get ariguments Folder name, and level of recurcion 
@@ -45,9 +46,9 @@ def read_in_chunks(file_object, chunk_size=1024):
 def rename(old_name, new_name):
     if old_name != new_name:
         os.renames(old_name, new_name)
-        print(f'{old_name}  -----> {new_name}')
+        print_blue(f'{old_name}  -----> {new_name}')
     else: 
-        print(f'{old_name}  ----- dont\'t need to rename')
+        print_green(f'{old_name}  ----- dont\'t need to rename')
 
 
 def scan_and_rename(folder, r_limit, r_level = 1):
@@ -71,17 +72,24 @@ def scan_and_rename(folder, r_limit, r_level = 1):
             elif entry.is_file():
                 encoding_type = get_encoding_type(entry)
                 if encoding_type == 'utf-8':
-                    print(entry.name, 'already utf-8')
+                    print_green(f"{entry.name}, already utf-8")
                     continue
-                print(entry.name, 'of', encoding_type, 'encoding to utf-8', end=" ")
+                print_blue(f"{entry.name} of {encoding_type} encoding to utf-8")
                 with open(old_name, 'r', encoding=encoding_type) as in_file, \
                      open('template', 'w', encoding='utf-8') as outfile:
                     for piece in read_in_chunks(in_file):
                         outfile.write(piece)
                     os.remove(old_name)
                     os.rename('template', new_name)
-                    print(' - Done!')
-                    print(f'Encoded {old_name} of {encoding_type} ----> {new_name} of utf-8')
+                    print_green(f'Encoded {old_name} of {encoding_type} ----> {new_name} of utf-8')
+
+
+# скопировал разноцветные выводы из второго задания
+def print_green(msg):
+    print(colored(msg, 'green'))
+
+def print_blue(msg):
+    print(colored(msg, 'blue'))
 
 
 if __name__ == '__main__':
