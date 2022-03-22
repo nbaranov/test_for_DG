@@ -1,5 +1,3 @@
-from itertools import product
-from logging import WARNING
 import apiclient.discovery
 import httplib2
 
@@ -64,7 +62,7 @@ def read_plist(file):
         _list.append((dict_tag[i].text, dict_tag[i+1].text))
     return _list
 
-# разноцветные выводы настраивать logger было лень
+# разноцветные выводы, настраивать logger было лень
 def print_green(msg):
     print(colored(msg, 'green'))
 
